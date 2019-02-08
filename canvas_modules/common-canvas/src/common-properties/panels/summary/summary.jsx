@@ -6,7 +6,6 @@
  * Use, duplication or disclosure restricted by GSA ADP Schedule
  * Contract with IBM Corp.
  *******************************************************************************/
-/* eslint complexity: ["error", 30] */
 /* eslint max-depth: ["error", 6] */
 
 import React from "react";
@@ -16,8 +15,8 @@ import IconButton from "../../components/icon-button";
 import WideFlyout from "./../../components/wide-flyout";
 import Icon from "carbon-components-react/lib/components/Icon";
 import isEmpty from "lodash/isEmpty";
-import PropertyUtils from "./../../util/property-utils";
-import ControlUtils from "./../../util/control-utils";
+import * as PropertyUtils from "./../../util/property-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, CONDITION_MESSAGE_TYPE } from "./../../constants/constants";
 import uuid4 from "uuid/v4";
 import { STATES } from "./../../constants/constants.js";

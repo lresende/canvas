@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import ReadOnly from "./readonly.jsx";
-module.exports = ReadOnly;
+export default ReadOnly;

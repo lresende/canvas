@@ -13,7 +13,6 @@ function op() {
 	return "dmMeasurementEquals";
 }
 
-
 /**
  * Find the metadata for the given field and return if it matches the given data measurement
  * @param {Object} paramInfo first entry in the globals row, and the name of the desired field is a string attribute
@@ -59,5 +58,7 @@ function evaluate(paramInfo, param2Info, value, controller) {
 
 // Public Methods ------------------------------------------------------------->
 
-module.exports.op = op;
-module.exports.evaluate = evaluate;
+export {
+	op,
+	evaluate
+};

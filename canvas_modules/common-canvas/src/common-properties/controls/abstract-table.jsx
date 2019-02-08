@@ -16,7 +16,7 @@ import FlexibleTable from "./../components/flexible-table";
 import SubPanelCell from "./../panels/sub-panel/cell.jsx";
 import ReadonlyControl from "./readonly";
 import Icon from "./../../icons/icon.jsx";
-import PropertyUtils from "./../util/property-utils";
+import * as PropertyUtils from "./../util/property-utils";
 import { ControlType, EditStyle } from "./../constants/form-constants";
 import Tooltip from "./../../tooltip/tooltip.jsx";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, TOOL_TIP_DELAY, STATES,

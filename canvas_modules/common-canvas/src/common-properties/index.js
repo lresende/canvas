@@ -8,5 +8,4 @@
  *******************************************************************************/
 
 import CommonProperties from "./common-properties.jsx";
-
-module.exports = CommonProperties;
+export default CommonProperties;

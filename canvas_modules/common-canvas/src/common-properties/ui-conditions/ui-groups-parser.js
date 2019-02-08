@@ -7,8 +7,6 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 
-/* eslint complexity: ["error", 32]*/
-
 import logger from "../../../utils/logger";
 import { ItemType } from "../constants/form-constants";
 
@@ -94,6 +92,6 @@ function _newPanelTreeObject(panelTree, panelId) {
 	panelTree[panelId] = { controls: [], panels: [] };
 }
 
-module.exports = {
-	parseUiContent: parseUiContent
+export {
+	parseUiContent
 };

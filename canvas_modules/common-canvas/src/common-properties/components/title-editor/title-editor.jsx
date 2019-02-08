@@ -15,7 +15,7 @@ import { setTitle } from "./../../actions";
 import Icon from "./../../../icons/icon.jsx";
 import TextInput from "carbon-components-react/lib/components/TextInput";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS } from "./../../constants/constants";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 
 class TitleEditor extends Component {
 	constructor(props) {

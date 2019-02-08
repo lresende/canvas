@@ -13,7 +13,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import FlexibleTable from "./../flexible-table";
 import PropertiesButtons from "./../properties-buttons";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 
 import Button from "carbon-components-react/lib/components/Button";
 import Checkbox from "carbon-components-react/lib/components/Checkbox";

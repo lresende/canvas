@@ -32,6 +32,6 @@ function searchMessage(object, l10nProvider) {
 	}
 }
 
-module.exports = {
-	translateMessages: translateMessages
+export {
+	translateMessages
 };

@@ -11,7 +11,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Checkbox from "carbon-components-react/lib/components/Checkbox";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import classNames from "classnames";
 import ValidationMessage from "./../../components/validation-message";
 import { STATES } from "./../../constants/constants.js";

@@ -10,7 +10,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import PropertyUtil from "./../../util/property-utils.js";
+import * as PropertyUtil from "./../../util/property-utils.js";
 import classNames from "classnames";
 import { STATES } from "./../../constants/constants";
 

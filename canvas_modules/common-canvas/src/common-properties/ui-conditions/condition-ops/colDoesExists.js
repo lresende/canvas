@@ -8,7 +8,7 @@
  *******************************************************************************/
 
 import logger from "./../../../../utils/logger";
-import PropertyUtils from "./../../util/property-utils.js";
+import * as PropertyUtils from "./../../util/property-utils.js";
 
 function op() {
 	return "colDoesExists";
@@ -52,5 +52,7 @@ function valueInDataset(dataset, field) {
 
 // Public Methods ------------------------------------------------------------->
 
-module.exports.op = op;
-module.exports.evaluate = evaluate;
+export {
+	op,
+	evaluate
+};

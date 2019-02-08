@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import MoveableTableRows from "./moveable-table-rows.jsx";
-module.exports = MoveableTableRows;
+export default MoveableTableRows;

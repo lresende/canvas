@@ -12,7 +12,7 @@ import propertyOf from "lodash/propertyOf";
 import { makePrimaryTab } from "./EditorForm";
 import { UIItem } from "./UIItem";
 import { L10nProvider } from "../util/L10nProvider";
-import Conditions from "./Conditions";
+import * as Conditions from "./Conditions";
 import { Size } from "../constants/form-constants";
 
 export default class Form {

@@ -7,7 +7,6 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 
-/* eslint complexity: ["error", 37] */
 /* eslint max-depth: ["error", 5] */
 
 import { Control, SubControl } from "./ControlInfo";
@@ -716,5 +715,7 @@ function _parameterValueLabels(parameter, l10nProvider) {
 	return [];
 }
 
-module.exports.makePrimaryTab = makePrimaryTab;
-module.exports.makeControl = _makeControl;
+export {
+	makePrimaryTab,
+	_makeControl as makeControl
+};

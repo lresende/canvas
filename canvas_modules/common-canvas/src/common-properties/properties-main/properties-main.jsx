@@ -16,7 +16,7 @@ import EditorForm from "./../components/editor-form";
 import Form from "./../form/Form";
 import CommonPropertiesAction from "./../../command-actions/commonPropertiesAction";
 import PropertiesController from "./../properties-controller";
-import PropertyUtils from "./../util/property-utils";
+import * as PropertyUtils from "./../util/property-utils";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, CONDITION_RETURN_VALUE_HANDLING } from "./../constants/constants";
 import { Size } from "./../constants/form-constants";
 import isEqual from "lodash/isEqual";

@@ -7,11 +7,10 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 /*	eslint max-depth: ["error", 10]*/
-/* eslint complexity: ["error", 27] */
 
 import logger from "../../../utils/logger";
-import UiConditions from "./ui-conditions";
-import PropertyUtils from "../util/property-utils";
+import * as UiConditions from "./ui-conditions";
+import * as PropertyUtils from "../util/property-utils";
 import { DEFAULT_VALIDATION_MESSAGE, STATES, PANEL_TREE_ROOT,
 	CONDITION_TYPE, CONDITION_DEFINITION_INDEX, MESSAGE_KEYS_DEFAULTS,
 	MESSAGE_KEYS, DEFAULT_DATE_FORMAT, DEFAULT_TIME_FORMAT } from "../constants/constants";
@@ -981,15 +980,16 @@ function _injectInvalidFieldDefinition(control, valDefinitions, keyName, control
 	}
 }
 
-
-module.exports.validatePropertiesValues = validatePropertiesValues;
-module.exports.validateConditions = validateConditions;
-module.exports.validatePropertiesConditions = validatePropertiesConditions;
-module.exports.validateInput = validateInput;
-module.exports.filterConditions = filterConditions;
-module.exports.allowConditions = allowConditions;
-module.exports.updateState = updateState;
-module.exports.getParamRefPropertyId = getParamRefPropertyId;
-module.exports.injectDefaultValidations = injectDefaultValidations;
-module.exports.updatePanelChildrenStatesForPanelIds = updatePanelChildrenStatesForPanelIds;
-module.exports.searchInArray = searchInArray;
+export {
+	validatePropertiesValues,
+	validateConditions,
+	validatePropertiesConditions,
+	validateInput,
+	filterConditions,
+	allowConditions,
+	updateState,
+	getParamRefPropertyId,
+	injectDefaultValidations,
+	updatePanelChildrenStatesForPanelIds,
+	searchInArray
+};

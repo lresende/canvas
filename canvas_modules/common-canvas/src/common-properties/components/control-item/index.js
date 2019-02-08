@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import ControlItem from "./control-item.jsx";
-module.exports = ControlItem;
+export default ControlItem;

@@ -6,7 +6,6 @@
  * Use, duplication or disclosure restricted by GSA ADP Schedule
  * Contract with IBM Corp.
  *******************************************************************************/
-/* eslint complexity: ["error", 30] */
 
 import React from "react";
 
@@ -14,7 +13,7 @@ import { Type, ControlType } from "./../constants/form-constants";
 import { PropertyDef } from "./../form/PropertyDef";
 import { makeControl } from "./../form/EditorForm";
 import { L10nProvider } from "./../util/L10nProvider";
-import ControlUtils from "./../util/control-utils";
+import * as ControlUtils from "./../util/control-utils";
 
 import TextfieldControl from "./textfield";
 import ReadonlyControl from "./readonly";

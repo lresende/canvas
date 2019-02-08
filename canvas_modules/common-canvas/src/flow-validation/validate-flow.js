@@ -7,7 +7,7 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 import Form from "../common-properties/form/Form";
-import PropertyUtils from "../common-properties/util/property-utils";
+import * as PropertyUtils from "../common-properties/util/property-utils";
 import PropertiesController from "../common-properties/properties-controller";
 import logger from "../../utils/logger";
 import isEqual from "lodash/isEqual";
@@ -92,6 +92,4 @@ function _setNodeMessages(node, pipelineId, propertiesController, canvasControll
 	}
 }
 
-module.exports = {
-	validateFlow: validateFlow
-};
+export default validateFlow;

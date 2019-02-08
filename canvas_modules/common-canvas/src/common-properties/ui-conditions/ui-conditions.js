@@ -6,14 +6,12 @@
  * Use, duplication or disclosure restricted by GSA ADP Schedule
  * Contract with IBM Corp.
  *******************************************************************************/
-/* eslint complexity: ["error", 34] */
 /* eslint max-depth: ["error", 7] */
 
 import logger from "./../../../utils/logger";
 import cloneDeep from "lodash/cloneDeep";
 import intersectionWith from "lodash/intersectionWith";
 import unionWith from "lodash/unionWith";
-// import union from "lodash/union";
 import isEqual from "lodash/isEqual";
 
 /**
@@ -361,7 +359,7 @@ function _getColumnNumber(param) {
 	return -1;
 }
 
-module.exports = {
-	validateInput: validateInput,
-	filter: filter
+export {
+	validateInput,
+	filter
 };

@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import PropertiesEditor from "./properties-editor.jsx";
-module.exports = PropertiesEditor;
+export default PropertiesEditor;

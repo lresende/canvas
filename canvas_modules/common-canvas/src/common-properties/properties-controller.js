@@ -10,12 +10,12 @@
 
 import PropertiesStore from "./properties-store.js";
 import logger from "../../utils/logger";
-import UiConditionsParser from "./ui-conditions/ui-conditions-parser.js";
-import ExpressionInfoParser from "./controls/expression/expressionInfo-parser.js";
+import * as UiConditionsParser from "./ui-conditions/ui-conditions-parser.js";
+import * as ExpressionInfoParser from "./controls/expression/expressionInfo-parser.js";
 
-import UiGroupsParser from "./ui-conditions/ui-groups-parser.js";
-import conditionsUtil from "./ui-conditions/conditions-utils";
-import PropertyUtils from "./util/property-utils.js";
+import * as UiGroupsParser from "./ui-conditions/ui-groups-parser.js";
+import * as conditionsUtil from "./ui-conditions/conditions-utils";
+import * as PropertyUtils from "./util/property-utils.js";
 
 import { STATES, ACTIONS, CONDITION_TYPE, PANEL_TREE_ROOT, CONDITION_MESSAGE_TYPE } from "./constants/constants.js";
 import CommandStack from "../command-stack/command-stack.js";
@@ -25,7 +25,7 @@ import cloneDeep from "lodash/cloneDeep";
 import assign from "lodash/assign";
 import isEmpty from "lodash/isEmpty";
 
-import ConditionOps from "./ui-conditions/condition-ops/condition-ops";
+import * as ConditionOps from "./ui-conditions/condition-ops/condition-ops";
 
 export default class PropertiesController {
 

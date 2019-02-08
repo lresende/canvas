@@ -9,7 +9,6 @@
 
 import moment from "moment";
 
-
 function op() {
 	return "isDateTime";
 }
@@ -25,5 +24,7 @@ function evaluate(paramInfo, param2Info, value, controller) {
 
 // Public Methods ------------------------------------------------------------->
 
-module.exports.op = op;
-module.exports.evaluate = evaluate;
+export {
+	op,
+	evaluate
+};

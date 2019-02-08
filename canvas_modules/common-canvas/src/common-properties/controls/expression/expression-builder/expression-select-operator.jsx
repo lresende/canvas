@@ -11,7 +11,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "carbon-components-react/lib/components/Button";
 
-import PropertyUtils from "./../../../util/property-utils";
+import * as PropertyUtils from "./../../../util/property-utils";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, TOOL_TIP_DELAY } from "./../../../constants/constants";
 import Tooltip from "./../../../../tooltip/tooltip.jsx";
 import uuid4 from "uuid/v4";

@@ -11,7 +11,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import ValidationMessage from "./../../components/validation-message";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import { STATES } from "./../../constants/constants.js";
 import classNames from "classnames";
 

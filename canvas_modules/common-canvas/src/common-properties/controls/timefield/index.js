@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import TimeField from "./timefield.jsx";
-module.exports = TimeField;
+export default TimeField;

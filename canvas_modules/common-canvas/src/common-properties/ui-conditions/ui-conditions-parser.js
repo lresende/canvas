@@ -7,8 +7,6 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 
-/* eslint complexity: ["error", 30]*/
-
 import logger from "../../../utils/logger";
 import { ItemType, PanelType } from "../constants/form-constants";
 
@@ -250,10 +248,10 @@ function _setDefinitions(container, controls, groupDef) {
 	}
 }
 
-module.exports = {
-	parseInput: parseInput,
-	parseRequiredParameters: parseRequiredParameters,
-	parseControls: parseControls,
-	parseConditions: parseConditions,
-	parseControl: parseControl
+export {
+	parseInput,
+	parseRequiredParameters,
+	parseControls,
+	parseConditions,
+	parseControl
 };

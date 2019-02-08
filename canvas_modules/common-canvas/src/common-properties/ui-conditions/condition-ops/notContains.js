@@ -8,7 +8,7 @@
  *******************************************************************************/
 
 import logger from "./../../../../utils/logger";
-import utils from "./../conditions-utils.js";
+import * as utils from "./../conditions-utils.js";
 
 function op() {
 	return "notContains";
@@ -51,5 +51,7 @@ function evaluate(paramInfo, param2Info, value, controller) {
 
 // Public Methods ------------------------------------------------------------->
 
-module.exports.op = op;
-module.exports.evaluate = evaluate;
+export {
+	op,
+	evaluate
+};

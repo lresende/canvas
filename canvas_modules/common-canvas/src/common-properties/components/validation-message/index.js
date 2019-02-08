@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import ValidationMessage from "./validation-message.jsx";
-module.exports = ValidationMessage;
+export default ValidationMessage;

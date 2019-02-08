@@ -10,7 +10,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import ValidationMessage from "./../../components/validation-message";
 import { STATES, TOOL_TIP_DELAY } from "./../../constants/constants.js";
 import Tooltip from "./../../../tooltip/tooltip.jsx";
@@ -20,7 +20,7 @@ import uuid4 from "uuid/v4";
 import { ControlType } from "./../../constants/form-constants";
 
 import classNames from "classnames";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 
 class ReadonlyControl extends React.Component {
 	render() {

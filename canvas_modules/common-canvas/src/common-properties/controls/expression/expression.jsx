@@ -19,10 +19,10 @@ import Link from "carbon-components-react/lib/components/Link";
 
 import ValidationMessage from "./../../components/validation-message";
 import WideFlyout from "./../../components/wide-flyout";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 import ExpressionBuilder from "./expression-builder/expression-builder.jsx";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, CONDITION_MESSAGE_TYPE, DEFAULT_VALIDATION_MESSAGE } from "./../../constants/constants";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import { STATES } from "./../../constants/constants.js";
 
 

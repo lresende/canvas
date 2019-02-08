@@ -13,7 +13,7 @@ import { connect } from "react-redux";
 import classNames from "classnames";
 import Accordion from "carbon-components-react/lib/components/Accordion";
 import AccordionItem from "carbon-components-react/lib/components/AccordionItem";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import { STATES } from "./../../constants/constants.js";
 
 

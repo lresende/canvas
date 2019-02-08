@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import TitleEditor from "./title-editor.jsx";
-module.exports = TitleEditor;
+export default TitleEditor;

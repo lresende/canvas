@@ -13,7 +13,7 @@ import PropertiesButtons from "./components/properties-buttons";
 import PropertiesMain from "./properties-main/properties-main";
 import PropertiesModal from "./components/properties-modal";
 import ValidationMessage from "./components/validation-message";
-import PropertyUtils from "./util/property-utils";
+import * as PropertyUtils from "./util/property-utils";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, CONDITION_RETURN_VALUE_HANDLING } from "./constants/constants";
 
 import { injectIntl, intlShape } from "react-intl";
@@ -35,16 +35,16 @@ class CommonProperties extends React.Component {
 		this.applyPropertiesEditing = this.applyPropertiesEditing.bind(this);
 	}
 
-	setPropertiesHasMounted() {
-		this.propertiesMainHasMounted = true;
-	}
-
 	componentDidCatch(error, info) {
 		this.setState({
 			hasError: true,
 			error: error,
 			info: info
 		});
+	}
+
+	setPropertiesHasMounted() {
+		this.propertiesMainHasMounted = true;
 	}
 
 	applyPropertiesEditing(closeEditor) {

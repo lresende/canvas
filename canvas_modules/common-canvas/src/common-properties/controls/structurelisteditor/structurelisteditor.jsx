@@ -12,10 +12,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import AbstractTable from "./../abstract-table.jsx";
 import MoveableTableRows from "./../../components/moveable-table-rows";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 import ValidationMessage from "./../../components/validation-message";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, STATES } from "./../../constants/constants";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 
 class StructurelisteditorControl extends AbstractTable {
 

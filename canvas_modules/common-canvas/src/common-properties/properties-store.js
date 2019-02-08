@@ -25,7 +25,7 @@ import errorMessagesReducer from "./reducers/error-messages";
 import datasetMetadataReducer from "./reducers/dataset-metadata";
 import rowSelectionsReducer from "./reducers/row-selections";
 import componentMetadataReducer from "./reducers/component-metadata";
-import PropertyUtils from "./util/property-utils.js";
+import * as PropertyUtils from "./util/property-utils.js";
 import isEqual from "lodash/isEqual";
 import { CONDITION_MESSAGE_TYPE, MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS } from "./constants/constants.js";
 

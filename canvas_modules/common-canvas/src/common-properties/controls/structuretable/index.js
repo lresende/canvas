@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import StructureTable from "./structuretable.jsx";
-module.exports = StructureTable;
+export default StructureTable;

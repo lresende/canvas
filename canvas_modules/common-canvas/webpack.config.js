@@ -17,6 +17,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPl
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
+	mode: "production",
 	context: __dirname,
 	devtool: "source-map",
 	entry: {
@@ -42,7 +43,7 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: "babel-loader",
 				query: {
-					presets: ["react", "es2015", "stage-1"]
+					presets: ["@babel/preset-env", "@babel/preset-react"]
 				}
 			},
 			{
@@ -76,7 +77,6 @@ module.exports = {
 			failOnWarning: true,
 			failOnError: true
 		}),
-		new webpack.optimize.UglifyJsPlugin({ sourceMap: true }), // minify everything
 		new webpack.optimize.AggressiveMergingPlugin(), // Merge chunk
 		new ExtractTextPlugin("common-canvas.css"),
 		new ExtractTextPlugin("common-canvas.min.css"),

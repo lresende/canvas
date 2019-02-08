@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import WideFlyout from "./wide-flyout.jsx";
-module.exports = WideFlyout;
+export default WideFlyout;

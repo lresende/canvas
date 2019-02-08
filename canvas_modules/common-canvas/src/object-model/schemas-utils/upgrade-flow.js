@@ -217,8 +217,8 @@ function upgrade(pipelineFlow) {
 }
 
 
-module.exports = {
-	upgradePipelineFlow: upgrade,
-	extractVersion: extractVersion,
-	LATEST_VERSION: LATEST_VERSION
+export {
+	upgrade as upgradePipelineFlow,
+	extractVersion,
+	LATEST_VERSION
 };

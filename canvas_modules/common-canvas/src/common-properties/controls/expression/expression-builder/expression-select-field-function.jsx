@@ -14,7 +14,7 @@ import Tabs from "carbon-components-react/lib/components/Tabs";
 import Tab from "carbon-components-react/lib/components/Tab";
 import FlexibleTable from "./../../../components/flexible-table/flexible-table.jsx";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, EXPRESSION_TABLE_ROWS } from "./../../../constants/constants";
-import PropertyUtils from "./../../../util/property-utils";
+import * as PropertyUtils from "./../../../util/property-utils";
 
 export default class ExpressionSelectFieldOrFunction extends React.Component {
 

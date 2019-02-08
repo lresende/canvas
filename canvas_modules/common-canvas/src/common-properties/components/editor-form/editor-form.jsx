@@ -7,15 +7,13 @@
  * Contract with IBM Corp.
  *******************************************************************************/
 
-/* eslint complexity: ["error", 28] */
-
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { setActiveTab } from "./../../actions";
 import Tabs from "carbon-components-react/lib/components/Tabs";
 import Tab from "carbon-components-react/lib/components/Tab";
-import PropertyUtil from "./../../util/property-utils.js";
+import * as PropertyUtil from "./../../util/property-utils.js";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS } from "./../../constants/constants";
 import isEmpty from "lodash/isEmpty";
 import sortBy from "lodash/sortBy";

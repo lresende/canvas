@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import RadioSet from "./radioset.jsx";
-module.exports = RadioSet;
+export default RadioSet;

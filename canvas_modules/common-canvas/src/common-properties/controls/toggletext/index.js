@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import ToggleText from "./toggletext.jsx";
-module.exports = ToggleText;
+export default ToggleText;

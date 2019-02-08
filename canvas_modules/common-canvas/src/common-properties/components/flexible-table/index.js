@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import FlexibleTable from "./flexible-table.jsx";
-module.exports = FlexibleTable;
+export default FlexibleTable;

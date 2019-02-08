@@ -6,7 +6,7 @@
  * Use, duplication or disclosure restricted by GSA ADP Schedule
  * Contract with IBM Corp.
  *******************************************************************************/
-/* eslint complexity: ["error", 25] */
+
 /* eslint max-depth: ["error", 5] */
 
 import React from "react";
@@ -16,7 +16,7 @@ import { Table, Thead, Th, Tr, Td } from "reactable";
 import Search from "carbon-components-react/lib/components/Search";
 
 import Icon from "./../../../icons/icon.jsx";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 import Tooltip from "./../../../tooltip/tooltip.jsx";
 import { MESSAGE_KEYS, MESSAGE_KEYS_DEFAULTS, TOOL_TIP_DELAY, STATES } from "./../../constants/constants";
 import isEmpty from "lodash/isEmpty";

@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import TextInput from "carbon-components-react/lib/components/TextInput";
 import ValidationMessage from "./../../components/validation-message";
-import ControlUtils from "./../../util/control-utils";
+import * as ControlUtils from "./../../util/control-utils";
 import moment from "moment";
 import { DEFAULT_DATE_FORMAT, STATES } from "./../../constants/constants.js";
 import classNames from "classnames";

@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 			}
 		},
 		webpack: {
-			client: require("./webpack.config")
+			prod: require("./webpack.config")
 		}
 	});
 
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-yamllint");
 	grunt.loadNpmTasks("grunt-webpack");
 
-	var buildTasks = ["clean", "eslint", "jsonlint", "yamllint", "webpack"];
+	var buildTasks = ["clean", "eslint", "jsonlint", "yamllint", "webpack:prod"];
 
 	grunt.registerTask("build", buildTasks);
 	grunt.registerTask("default", ["build"]);

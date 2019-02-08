@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import Checkbox from "./checkbox.jsx";
-module.exports = Checkbox;
+export default Checkbox;

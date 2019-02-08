@@ -8,4 +8,4 @@
  *******************************************************************************/
 
 import IconButton from "./icon-button.jsx";
-module.exports = IconButton;
+export default IconButton;

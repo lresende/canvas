@@ -357,18 +357,18 @@ function _findCorrespondingValue(input, values) {
 	return input;
 }
 
-module.exports = {
-	toType: toType,
-	formatMessage: formatMessage,
-	evaluateText: evaluateText,
-	getTableFieldIndex: getTableFieldIndex,
-	convertInputDataModel: convertInputDataModel,
-	getFieldsFromControlValues: getFieldsFromControlValues,
-	copy: copy,
-	stringifyFieldValue: stringifyFieldValue,
-	fieldValueMatchesProto: fieldValueMatchesProto,
-	fieldStringToValue: fieldStringToValue,
-	generateId: generateId,
-	getDMDefault: getDMDefault,
-	getDMFieldIcon: getDMFieldIcon
+export {
+	toType,
+	formatMessage,
+	evaluateText,
+	getTableFieldIndex,
+	convertInputDataModel,
+	getFieldsFromControlValues,
+	copy,
+	stringifyFieldValue,
+	fieldValueMatchesProto,
+	fieldStringToValue,
+	generateId,
+	getDMDefault,
+	getDMFieldIcon
 };

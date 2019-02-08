@@ -8,7 +8,7 @@
  *******************************************************************************/
 
 import logger from "./../../../../utils/logger";
-import PropertyUtils from "./../../util/property-utils";
+import * as PropertyUtils from "./../../util/property-utils";
 import isEqual from "lodash/isEqual";
 import { ParamRole } from "./../../constants/form-constants";
 
@@ -72,5 +72,7 @@ function _findFieldColumnValues(paramInfo, controller) {
 
 // Public Methods ------------------------------------------------------------->
 
-module.exports.op = op;
-module.exports.evaluate = evaluate;
+export {
+	op,
+	evaluate
+};
