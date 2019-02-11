@@ -41,7 +41,7 @@ const rules = [
 	{
 		test: /\.js(x?)$/,
 		loader: "babel-loader",
-		exclude: /node_modules/,
+		exclude: /(node_modules|common-canvas)/,
 		query: babelOptions
 	},
 	{
@@ -78,7 +78,7 @@ const plugins = [
 		failOnError: true
 	}),
 	new webpack.optimize.OccurrenceOrderPlugin(),
-	new webpack.optimize.UglifyJsPlugin(), // minify everything
+	// 	new webpack.optimize.UglifyJsPlugin(), // minify everything
 	new webpack.optimize.AggressiveMergingPlugin(), // Merge chunk
 	new ExtractTextPlugin("styles/harness.css"),
 	new webpack.optimize.CommonsChunkPlugin({
