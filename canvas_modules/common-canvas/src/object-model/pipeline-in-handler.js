@@ -88,6 +88,12 @@ export default class PipelineInHandler {
 			if (has(node, "app_data.ui_data.style")) {
 				obj.style = node.app_data.ui_data.style;
 			}
+			if (has(node, "isSupernodeInputBinding")) {
+				obj.isSupernodeInputBinding = true;
+			}
+			if (has(node, "isSupernodeOutputBinding")) {
+				obj.isSupernodeOutputBinding = true;
+			}
 			return obj;
 		});
 	}

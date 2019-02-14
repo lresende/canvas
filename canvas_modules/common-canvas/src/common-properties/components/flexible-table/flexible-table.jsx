@@ -200,9 +200,8 @@ export default class FlexibleTable extends React.Component {
 					const fontSize = parseFloat(style);
 					// this is to adjust for multiple-select edit.
 					// There is one additional row and header to account for.
-					const mseHeight = this.props.selectedEditRow ? rowHeight + fixedHeaderHeight + 1 : 0;
 					const minHeight = (rowHeight * 2 + headerHeight);
-					newHeight = (parentElement.offsetHeight - tableElement.offsetTop) / fontSize + headerHeight - mseHeight;
+					newHeight = (parentElement.offsetHeight - tableElement.offsetTop) / fontSize + headerHeight;
 					newHeight = Math.max(newHeight, minHeight);
 				} else {
 					newHeight = (rowHeight * 4 + headerHeight);
@@ -477,14 +476,15 @@ export default class FlexibleTable extends React.Component {
 			this.scrollToRow();
 		}
 
-
 		// adjust the height of the body so it can scroll correctly, in em
 		if (this.tbodyNode) {
 			let clientHeightEm;
 			if (this.flexibleTableDiv.clientHeight) {
-				clientHeightEm = this.flexibleTableDiv.clientHeight / parseFloat(getComputedStyle(document.querySelector("table"))["font-size"]);
+				const fontSize = parseFloat(getComputedStyle(document.querySelector("table"))["font-size"]);
+				clientHeightEm = this.flexibleTableDiv.clientHeight / fontSize;
 			}
 			this.tbodyNode.style.height = (this.theadNode) ? (clientHeightEm - 2.5) + "em" : "auto";
+			this.tbodyNode.style.width = (tableWidth) ? tableWidth + "px" : "auto"; // table body renders wider than the table even when contents are also tableWidth
 		}
 
 		const heightStyle = this.props.noAutoSize ? {} : { height: tableHeight + "em" };
