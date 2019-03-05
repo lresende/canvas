@@ -9,6 +9,7 @@
 
 import { EditStyle } from "../constants/form-constants";
 
+
 class ControlDef {
 	constructor(settings) {
 		this.name = settings.name;
