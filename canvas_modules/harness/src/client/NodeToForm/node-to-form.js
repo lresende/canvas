@@ -73,10 +73,10 @@ function setNodeForms(nodes) {
 }
 
 
-module.exports = {
-	initialize: initialize,
-	setNodeForm: setNodeForm,
-	setNodeForms: setNodeForms,
-	getNodeForm: getNodeForm,
-	clearNodeForms: clearNodeForms
+export {
+	initialize,
+	setNodeForm,
+	setNodeForms,
+	getNodeForm,
+	clearNodeForms
 };

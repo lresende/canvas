@@ -29,7 +29,7 @@ import Breadcrumbs from "./components/breadcrumbs.jsx";
 import Console from "./components/console.jsx";
 import SidePanel from "./components/sidepanel.jsx";
 import TestService from "./services/TestService";
-import NodeToForm from "./NodeToForm/node-to-form";
+import * as NodeToForm from "./NodeToForm/node-to-form";
 
 import CustomSliderPanel from "./components/custom-panels/CustomSliderPanel";
 import CustomTogglePanel from "./components/custom-panels/CustomTogglePanel";
@@ -45,8 +45,8 @@ import RandomEffectsPanel from "./components/custom-panels/RandomEffectsPanel";
 import AddtlCmptsTest from "./components/custom-components/AddtlCmptsTest";
 import CustomSubjectsPanel from "./components/custom-panels/CustomSubjectsPanel";
 
-import CustomOpMax from "./custom/condition-ops/customMax";
-import CustomOpSyntaxCheck from "./custom/condition-ops/customSyntaxCheck";
+import * as CustomOpMax from "./custom/condition-ops/customMax";
+import * as CustomOpSyntaxCheck from "./custom/condition-ops/customSyntaxCheck";
 
 
 import BlankCanvasImage from "../../assets/images/blank_canvas.svg";

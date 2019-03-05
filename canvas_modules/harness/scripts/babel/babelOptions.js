@@ -12,7 +12,7 @@ const isProduction = process.env.NODE_ENV === "production";
 var assign = require("object-assign");
 
 var babelBaseOptions = {
-	presets: ["react", "env"]
+	presets: ["@babel/preset-env", "@babel/preset-react"]
 };
 
 var babelClientOptions = assign({}, babelBaseOptions, {
