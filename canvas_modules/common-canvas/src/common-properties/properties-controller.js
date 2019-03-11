@@ -117,7 +117,7 @@ export default class PropertiesController {
 				this.setPropertyValues(propertyValues);
 			}
 			// Determine from the current control set whether or not there can be multiple input datasets
-			this.multipleSchemas = this._canHaveMultipleSchemas();
+			this.multipleSchemas = this._canHaveMultipleSchemas(datasetMetadata);
 			// Set the opening dataset(s), during which multiples are flattened and compound names generated if necessary
 			this.setDatasetMetadata(datasetMetadata);
 			// for control.type of structuretable that do not use FieldPicker, we need to add to
@@ -339,7 +339,8 @@ export default class PropertiesController {
 	 *
 	 * @return True if multiple input datasets are supported in this node
 	 */
-	_canHaveMultipleSchemas() {
+	_canHaveMultipleSchemas(datasetMetadata) {
+    console.log(datasetMetadata);
 		for (const keyName in this.controls) {
 			if (this.controls.hasOwnProperty(keyName)) {
 				const control = this.controls[keyName];
@@ -348,7 +349,15 @@ export default class PropertiesController {
 				}
 			}
 		}
-		return false;
+		//  manually check if there are multiple schemas in the dataset
+		// this is for non-control related components like expression builder
+		const schemas = [];
+		for (let i = 0; i < datasetMetadata.length; i++) {
+			if (schemas.indexOf(datasetMetadata.schema) === -1) {
+				schemas.push(datasetMetadata.schema);
+			}
+		}
+		return (schemas.length > 1);
 	}
 
 	_getDefaultSubControlValue(col, fieldName, fields, control) {

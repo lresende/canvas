@@ -187,9 +187,20 @@ export default class ExpressionSelectFieldOrFunction extends React.Component {
 			id: "fields",
 			field_value_groups: []
 		};
+		// check if there is more than one schema present
+		// const schemas = [];
+		// for (let i = 0; i < dataset.length; i++) {
+		// 	if (schemas.indexOf(dataset[i].schema) === -1) {
+		// 		schemas.push(dataset[i].schema);
+		// 	}
+		// }
 		dataset.forEach((field) => {
+			var fieldName = field.origName;
+			// if (schemas.length > 1) {
+			// 	fieldName = field.schema + "." + fieldName;
+			// }
 			var entry = {
-				id: field.name,
+				id: fieldName,
 				additional_column_entries: [
 					{
 						id: "storage",
