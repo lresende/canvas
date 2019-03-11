@@ -340,7 +340,6 @@ export default class PropertiesController {
 	 * @return True if multiple input datasets are supported in this node
 	 */
 	_canHaveMultipleSchemas(datasetMetadata) {
-    console.log(datasetMetadata);
 		for (const keyName in this.controls) {
 			if (this.controls.hasOwnProperty(keyName)) {
 				const control = this.controls[keyName];
@@ -349,15 +348,13 @@ export default class PropertiesController {
 				}
 			}
 		}
-		//  manually check if there are multiple schemas in the dataset
-		// this is for non-control related components like expression builder
-		const schemas = [];
-		for (let i = 0; i < datasetMetadata.length; i++) {
-			if (schemas.indexOf(datasetMetadata.schema) === -1) {
-				schemas.push(datasetMetadata.schema);
-			}
+		//  manually check for multiple schemas, for non-control components
+		// this should raise an warning, since there shouldn't be multiple inputs for non-multi-input paramDefs
+		if (datasetMetadata.length > 1) {
+			logger.warn("Multiple inputs detected for a non-multi input paramDef");
+			return true;
 		}
-		return (schemas.length > 1);
+		return false;
 	}
 
 	_getDefaultSubControlValue(col, fieldName, fields, control) {
@@ -1000,7 +997,7 @@ export default class PropertiesController {
 
 	/**
 	* @param panelId {name: panel.id}
-  * @param state string ("disabled", "enabled", "hidden", "visible")
+	* @param state string ("disabled", "enabled", "hidden", "visible")
 	*/
 	updatePanelState(panelId, state) {
 		this.propertiesStore.updatePanelState(panelId, state);
