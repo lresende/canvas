@@ -109,6 +109,7 @@ export default class PropertiesController {
 			this._parseSummaryControls(controls);
 			this.parsePanelTree();
 			conditionsUtil.injectDefaultValidations(this.controls, this.validationDefinitions, intl);
+
 			let datasetMetadata;
 			if (this.form.data) {
 				datasetMetadata = this.form.data.datasetMetadata;
@@ -116,8 +117,13 @@ export default class PropertiesController {
 					: this.form.data.currentParameters;
 				this.setPropertyValues(propertyValues);
 			}
+
 			// Determine from the current control set whether or not there can be multiple input datasets
 			this.multipleSchemas = this._canHaveMultipleSchemas(datasetMetadata);
+			this.schemaDelimiter = "."; // replace later to take an outside input, we don't know the source yet
+			// IMPORTANT - duplicated schemas use "_" to differentiate each other, this could cause parsing issues
+			// if the schemaDelimiter is also "_"
+
 			// Set the opening dataset(s), during which multiples are flattened and compound names generated if necessary
 			this.setDatasetMetadata(datasetMetadata);
 			// for control.type of structuretable that do not use FieldPicker, we need to add to
@@ -644,7 +650,7 @@ export default class PropertiesController {
 		}
 		if (this.multipleSchemas) {
 			for (const field of fields) {
-				field.name = field.schema + "." + field.origName;
+				field.name = field.schema + this.schemaDelimiter + field.origName;
 			}
 		}
 
