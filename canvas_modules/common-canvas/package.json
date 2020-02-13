@@ -1,12 +1,12 @@
 {
-  "name": "@elyra/canvas",
+  "name": "@elyra-ai/canvas",
   "version": "6.1.23",
   "description": "Elyra common-canvas",
   "main": "dist/common-canvas.js",
   "homepage": "https://github.com/elyra-ai/canvas",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elyra-ai/canvas/tree/master/canvas_modules/common-canvas"
+    "url": "https://github.com/elyra-ai/canvas.git"
   },
   "bugs": {
     "url": "https://github.com/elyra-ai/canvas/issues"
@@ -19,7 +19,7 @@
     "debug": "NODE_ENV=test node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
-    "@elyra/pipeline-schemas": "3.0.4",
+    "@elyra-ai/pipeline-schemas": "3.0.4",
     "carbon-components": "9.83.4",
     "carbon-components-react": "6.101.6",
     "carbon-icons": "7.0.7",
@@ -122,6 +122,9 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     },
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+    }
   }
 }
